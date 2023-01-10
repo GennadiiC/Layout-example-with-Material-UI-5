@@ -6,6 +6,7 @@ import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
+import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Stories from './Stories';
 
@@ -44,7 +45,9 @@ export default function LeftDrawer() {
 
   return (
     <Box>
-      <MenuIcon onClick={() => setOpen(true)}/>
+      <IconButton onClick={() => setOpen(true)}>
+        <MenuIcon />
+      </IconButton>
       <Drawer
         anchor='left'
         open={open}
@@ -53,5 +56,6 @@ export default function LeftDrawer() {
         {list()}
       </Drawer>
     </Box>
+   
   );
 }
